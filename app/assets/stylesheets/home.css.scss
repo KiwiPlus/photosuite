@@ -67,7 +67,8 @@ table {
 	padding:0.8% 5% 0.8% 0;
 	border-color: black;
 	border: solid 1px;
-	background-color: gray
+	background-color: white;
+	opacity: 0.5
 
 }
 .toplink{
@@ -79,7 +80,8 @@ html {
 
 }
 canvas{
-margin-top: 1%
+margin-top: 1%;
+margin-left: 1%
 }
 body {
 background-color: brown;
@@ -89,7 +91,8 @@ margin: 1%
 }
 
 #slider {
-	width: 40%
+
+	margin: 1%
 
 
 }
@@ -103,17 +106,34 @@ margin: 1%
 
 }
 .mockingbird {
-	width: 40%;
+
 
 
 }
 
 .controlscontainer {
+	overflow:hidden;
 	background-color:white;
 	margin-left: 7%;
-	margin-right: 7%
+	margin-right: 7%;
 }
-.textcontainer {
+.buttonscontainer {
+	position:relative;
 	float:right;
-	background-color:gray
+	width: 500px;
+	padding: 10px;
+	margin: 5px;
+	background: #2959e6;
+	color: #FFF;
+	cursor:pointer;
+}
+.button{
+	border: solid 3px;
+	border-color: white
+}
+.slidercontainer{
+	float:left;
+	overflow:hidden;
+	width: 500px
+
 }
