@@ -99,7 +99,7 @@ function addFilter(filterType, buffer, c) {
 			var pixels = initializeBuffer(c, img);
 
 			if (pixels) {
-				//					
+				//
 				// pre-processing for various filters
 				//
 				// blur and all matrix filters have to exist outside the main loop
