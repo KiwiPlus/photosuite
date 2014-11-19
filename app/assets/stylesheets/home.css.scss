@@ -63,14 +63,8 @@ table {
 
 }
 
-.menubar{
-	padding:0.8% 5% 0.8% 0;
-	border-color: black;
-	border: solid 1px;
-	background-color: white;
-	opacity: 0.5
 
-}
+
 .toplink{
 	padding-left: 20%
 
@@ -112,7 +106,6 @@ margin: 1%
 }
 
 .controlscontainer {
-	overflow:hidden;
 	background-color:white;
 	margin-left: 7%;
 	margin-right: 7%;
@@ -123,17 +116,39 @@ margin: 1%
 	width: 500px;
 	padding: 10px;
 	margin: 5px;
-	background: #2959e6;
-	color: #FFF;
+	background-color: #2959e6;
+	box-sizing: border-box;
+	display: inline-block;
 	cursor:pointer;
 }
 .button{
-	border: solid 3px;
-	border-color: white
+	border: solid 3px
+
 }
 .slidercontainer{
-	float:left;
-	overflow:hidden;
 	width: 500px
 
 }
+
+
+   #nav {
+      width: 100%;
+      float: right;
+      list-style: none;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ccc; 
+      border-top: 1px solid #ccc;
+ }
+   #nav li {
+      float: right; }
+   #nav li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #069;
+      border-right: 1px solid #ccc;
+      width: 100px }
+   #nav li a:hover {
+      color: #c00;
+      background-color: #fff; }
