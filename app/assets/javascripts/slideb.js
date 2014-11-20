@@ -6,8 +6,13 @@ var EdgeIt = document.getElementById('edges');
 var EmbossIt = document.getElementById('emboss');
 var GreysIt = document.getElementById('greyscale');
 var TintIt = document.getElementById('tint');
-var Slider = document.getElementById('slider');
+var MosaicIt = document.getElementById('mosaic');
+var PosterIt = document.getElementById('posterize');
+var SepiaIt = document.getElementById('sepia')
+var SeMosIt = document.getElementById('semos')
 var reset = document.getElementById('reset')
+
+//var Slider = document.getElementById('slider');
 // get value from slider
 // data-pb looks like is not working as intended
 //Slider.addEventListener("input", function(){
@@ -63,6 +68,30 @@ var reset = document.getElementById('reset')
 	TintIt.addEventListener('click', function(event) {
 	document.getElementById('testpicture').src = "assets/pic3.jpg"
 	document.getElementById('testpicture').setAttribute('class', 'filter-tint');
+	processFilters();
+	});
+
+	MosaicIt.addEventListener('click', function(event) {
+	document.getElementById('testpicture').src = "assets/pic3.jpg"
+	document.getElementById('testpicture').setAttribute('class', 'filter-mosaic');
+	processFilters();
+	});
+
+	PosterIt.addEventListener('click', function(event) {
+	document.getElementById('testpicture').src = "assets/pic3.jpg"
+	document.getElementById('testpicture').setAttribute('class', 'filter-posterize');
+	processFilters();
+	});
+
+	SepiaIt.addEventListener('click', function(event) {
+	document.getElementById('testpicture').src = "assets/pic3.jpg"
+	document.getElementById('testpicture').setAttribute('class', 'filter-sepia');
+	processFilters();
+	});
+
+	SeMosIt.addEventListener('click', function(event) {
+	document.getElementById('testpicture').src = "assets/pic3.jpg"
+	document.getElementById('testpicture').setAttribute('class', 'filter-sepia filter-mosaic');
 	processFilters();
 	});
 	}
