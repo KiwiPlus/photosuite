@@ -8,24 +8,30 @@
 
 	<body>
 
-		<div class= "controlscontainer">
-			   <ul id="nav">
-      <li><a href="#">Acerca de mi</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">Inicio</a></li>
 
-<div id="user_nav">
-    	<% if user_signed_in? %>
-        Signed in as <%= current_user.email %>
-        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-    	<% else %>
-        <%= link_to 'Register', new_user_registration_path %> or 
-        <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
+		<div class= "controlscontainer">
+	    	<% if user_signed_in? %>
+		        Signed in as <%= current_user.email %>
+		        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+	    	<% else %>
+		        <%= link_to 'Register', new_user_registration_path %> or 
+		        <%= link_to 'Sign in', new_user_session_path %>
+   		 <% end %>
 </div>
 
-   </ul>
+<div id="fb-root"></div>
+<div id="user_nav">
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+<div id="status">
+</div>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 
 
 		<div id="controls">
