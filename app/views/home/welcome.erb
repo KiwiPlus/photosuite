@@ -34,12 +34,14 @@
 
 
 
-		<div id="controls">
 
-			<img id="testpicture" class="" src="assets/pic3.jpg" alt="">
+<!-- uploader -->
+		<div id="controls">
+  			<input type='file' onchange="readURL(this);" />
+			<img id="testpicture" class="" src="#" alt="">
 
 			<div class= "controlbuttons">
-				<!--<input id="slider" type= "range" min= "0" max= "10" value= "5" Step= "0.05" id= "slider"></input>  slider-->
+
 					<button class= "button" id= "blur">Blur</button>
 					<button class= "button" id="sharpen">Sharpen</button>
 					<button class= "button" id = "edges" >Edges</button>
@@ -52,6 +54,8 @@
 					<button class="button" id= "semos">Sepia+Mosaic</button>
 					<button class= "button"id= "reset">reset</button>
 			</div>
+
+<body>
 
 
 
