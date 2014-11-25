@@ -40,3 +40,4 @@ gem 'jquery-ui-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'

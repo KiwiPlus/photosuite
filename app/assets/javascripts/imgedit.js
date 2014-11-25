@@ -26,26 +26,24 @@ var reset = document.getElementById('reset')
 
 
 // un-apply al effects
-	reset.addEventListener('click', function(event) {
-		document.getElementById('testpicture').src = "e.target.result"
-		document.getElementById('testpicture').setAttribute('class', '');
-	});
+
 // rest of effects
-	BlurIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result" // prevents effects from adding up
+	BlurIt.addEventListener('click', function(e) {
+	document.getElementById('testpicture').src =document.getElementById('testpicture').src;
+		 // prevents effects from adding up
 	document.getElementById('testpicture').setAttribute('class', 'filter-blur');
 	processFilters();
 	});
 
-	SharpIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
+	SharpIt.addEventListener('click', function(e) {
+document.getElementById('testpicture').src =document.getElementById('testpicture').src;
 	document.getElementById('testpicture').setAttribute('class', 'filter-sharpen');
 	processFilters();
 	});
 
 
 	EdgeIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
+document.getElementById('testpicture').src =document.getElementById('testpicture').src;
 	document.getElementById('testpicture').setAttribute('class', 'filter-edges');
 	processFilters();
 	});

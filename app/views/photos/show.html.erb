@@ -3,7 +3,8 @@
 <p>
   <strong>Title:</strong>
   <%= @photo.title %>
-  <%= image_tag @photo.image_url() if @photo.image? %>
+
+  <%= image_tag @photo.image_url.to_s if @photo.image_url.present? %>
 </p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
