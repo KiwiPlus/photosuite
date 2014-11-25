@@ -33,15 +33,10 @@
 </div>
 
 
-
-
 <!-- uploader -->
-		<div id="controls">
   			<input type='file' onchange="readURL(this);" />
 			<img id="testpicture" class="" src="#" alt="">
-
 			<div class= "controlbuttons">
-
 					<button class= "button" id= "blur">Blur</button>
 					<button class= "button" id="sharpen">Sharpen</button>
 					<button class= "button" id = "edges" >Edges</button>
@@ -55,25 +50,13 @@
 					<button class= "button"id= "reset">reset</button>
 			</div>
 
-<body>
+<%= form_for @home, html: {multipart: :true} do |f| %>
 
-
-
-		</div>
-					<!--<div class="slidercontainer">
-						<canvas id="canvas"></canvas>
-						<div id="slider"></div>
-						<div class= "mockingbird">
-							<input class= "mockslider" type= "range">
-							<input class= "mockslider"type= "range">				<input class= "mockslider" type= "range">
-							<input class= "mockslider"type= "range">				<input class= "mockslider" type= "range">
-							<input class= "mockslider"type= "range">				<input class= "mockslider" type= "range">
-							<input class= "mockslider"type= "range">
-							<input type= "file" id= "upload" >
-						</div>
-					-->
-
-
-					</div>
-		</div>
-	</body>
+<div>
+  <%= f.label :image, 'Choose Image' %>
+  <%= f.file_field :image %>
+</div>
+<div>
+  <%= f.submit 'Add' %>
+  <% end %>
+</div>

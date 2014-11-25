@@ -1,0 +1,8 @@
+<h1>New photo</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', photos_path %>
+<h1>Photo:</h1>
+<%= @photo.title %>
+<%= image_tag @photo.image_url() if @photo.image? %>
