@@ -39,5 +39,5 @@ gem 'jquery-ui-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
-gem 'carrierwave'
+gem 'paperclip'
 gem 'mini_magick'

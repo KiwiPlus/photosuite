@@ -1,5 +1,4 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
@@ -8,18 +7,17 @@ class PhotosController < ApplicationController
     respond_with(@photos)
   end
 
-  def show
-    respond_with(@photo)
+ def show
+    @photo = Photo.find(params[:photo])
   end
 
  def new
   @photo = Photo.new
  end
 
- def create
-   @photo = Photo.new(photo_params)
-   redirect_to photos_path, notice: 'Photo uploaded' if @photo.save
- end
+def create
+  @photo = Photo.create( photo_params )
+end
 
   def update
     @photo.update(photo_params)
@@ -32,11 +30,9 @@ class PhotosController < ApplicationController
   end
 
   private
-    def set_photo
-      @photo = Photo.find(params[:id])
-    end
+
 
     def photo_params
-      params.require(:photo).permit(:title)
+      params.require(:photo).permit(:image)
     end
 end
