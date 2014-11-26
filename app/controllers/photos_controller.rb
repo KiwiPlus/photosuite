@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   end
 
  def show
-    @photo = Photo.find(params[:photo])
+    @photo = Photo.find(params[:id])
   end
 
  def new
@@ -17,6 +17,9 @@ class PhotosController < ApplicationController
 
 def create
   @photo = Photo.create( photo_params )
+  @photo.save!
+  redirect_to photos_path, notice: 'Photo uploaded'
+
 end
 
   def update
