@@ -1,5 +1,50 @@
 
 
 <b>Image:</b>
-  <%= image_tag(@photo.image.url(:original)) %>
+	<img class="edited-image" id="uppic" src="<%= @photo.image.url(:original) %>"/>
+
+<div class= "topbanner"></div>
+
+	<body>
+
+
+		<div class= "controlscontainer">
+	    	<% if user_signed_in? %>
+		        Signed in as <%= current_user.email %>
+		        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+	    	<% else %>
+		        <%= link_to 'Register', new_user_registration_path %> or 
+		        <%= link_to 'Sign in', new_user_session_path %>
+   		 <% end %>
+</div>
+
+<div id="fb-root"></div>
+<div id="user_nav">
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+<div id="status">
+</div>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+
+<!-- uploader -->
+
+			<div class= "controlbuttons">
+					<button class= "button" id= "blur">Blur</button>
+					<button class= "button" id="sharpen">Sharpen</button>
+					<button class= "button" id = "edges" >Edges</button>
+					<button class= "button" id= "emboss" >Emboss</button>
+					<button class= "button" id = "greyscale" >Greyscale</button>
+					<button class= "button" id = "tint" >Tint</button>
+					<button class= "button" id = "mosaic" >Mosaic</button>
+					<button class= "button" id = "posterize" >Posterize</button>
+					<button class= "button" id = "sepia" >Sepia</button>
+					<button class="button" id= "semos">Sepia+Mosaic</button>
+					<button class= "button"id= "reset">reset</button>
+			</div>
 

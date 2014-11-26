@@ -25,71 +25,64 @@ var reset = document.getElementById('reset')
 
 
 
-// un-apply al effects
-
-// rest of effects
-	BlurIt.addEventListener('click', function(e) {
-	document.getElementById('testpicture').src =document.getElementById('testpicture').src;
-		 // prevents effects from adding up
-	document.getElementById('testpicture').setAttribute('class', 'filter-blur');
+	// rest of effects
+	BlurIt.addEventListener('click', function(event) {
+	document.getElementById('uppic').setAttribute('class', 'filter-blur');
 	processFilters();
 	});
 
-	SharpIt.addEventListener('click', function(e) {
-document.getElementById('testpicture').src =document.getElementById('testpicture').src;
-	document.getElementById('testpicture').setAttribute('class', 'filter-sharpen');
+	SharpIt.addEventListener('click', function(event) {
+	document.getElementById('uppic').setAttribute('class', 'filter-sharpen');
 	processFilters();
 	});
 
 
 	EdgeIt.addEventListener('click', function(event) {
-document.getElementById('testpicture').src =document.getElementById('testpicture').src;
-	document.getElementById('testpicture').setAttribute('class', 'filter-edges');
+	document.getElementById('uppic').setAttribute('class', 'filter-edges');
 	processFilters();
 	});
 
 
 	EmbossIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-emboss');
+	document.getElementById('uppic').setAttribute('class', 'filter-emboss');
 	processFilters();
 	});
 
 
 	GreysIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-greyscale');
+	document.getElementById('uppic').setAttribute('class', 'filter-greyscale');
 	processFilters();
 	});
 
 
 	TintIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-tint');
+	document.getElementById('uppic').setAttribute('class', 'filter-tint');
 	processFilters();
 	});
 
 	MosaicIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-mosaic');
+	document.getElementById('uppic').setAttribute('class', 'filter-mosaic');
 	processFilters();
 	});
 
 	PosterIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-posterize');
+	document.getElementById('uppic').setAttribute('class', 'filter-posterize');
 	processFilters();
 	});
 
 	SepiaIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-sepia');
+	document.getElementById('uppic').setAttribute('class', 'filter-sepia');
 	processFilters();
 	});
 
 	SeMosIt.addEventListener('click', function(event) {
-	document.getElementById('testpicture').src = "e.target.result"
-	document.getElementById('testpicture').setAttribute('class', 'filter-sepia filter-mosaic');
+	document.getElementById('uppic').setAttribute('class', 'filter-sepia filter-mosaic');
 	processFilters();
 	});
+
+	//currently not working//
+	reset.addEventListener('click', function(event) {
+	document.getElementById('uppic').src =document.getElementById('uppic').src;
+	});
+
 	}
