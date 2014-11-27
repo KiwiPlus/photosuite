@@ -1,16 +1,17 @@
-window.onload=function(){
+
+window.onload=function() {
+
 
 var BlurIt = document.getElementById('blur');
 var SharpIt = document.getElementById('sharpen');
-var EdgeIt = document.getElementById('edges');
-var EmbossIt = document.getElementById('emboss');
 var GreysIt = document.getElementById('greyscale');
 var TintIt = document.getElementById('tint');
 var MosaicIt = document.getElementById('mosaic');
-var PosterIt = document.getElementById('posterize');
-var SepiaIt = document.getElementById('sepia')
-var SeMosIt = document.getElementById('semos')
-var reset = document.getElementById('reset')
+var SepiaIt = document.getElementById('sepia');
+var SeMosIt = document.getElementById('semos');
+var reset = document.getElementById('reset');
+
+
 
 //var Slider = document.getElementById('slider');
 // get value from slider
@@ -23,9 +24,9 @@ var reset = document.getElementById('reset')
 
 
 
-
-
+	// un-apply al effects
 	// rest of effects
+
 	BlurIt.addEventListener('click', function(event) {
 	document.getElementById('uppic').setAttribute('class', 'filter-blur');
 	processFilters();
@@ -37,21 +38,10 @@ var reset = document.getElementById('reset')
 	});
 
 
-	EdgeIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-edges');
-	processFilters();
-	});
-
-
-	EmbossIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-emboss');
-	processFilters();
-	});
-
-
 	GreysIt.addEventListener('click', function(event) {
 	document.getElementById('uppic').setAttribute('class', 'filter-greyscale');
 	processFilters();
+
 	});
 
 
@@ -65,10 +55,6 @@ var reset = document.getElementById('reset')
 	processFilters();
 	});
 
-	PosterIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-posterize');
-	processFilters();
-	});
 
 	SepiaIt.addEventListener('click', function(event) {
 	document.getElementById('uppic').setAttribute('class', 'filter-sepia');
@@ -80,9 +66,11 @@ var reset = document.getElementById('reset')
 	processFilters();
 	});
 
-	//currently not working//
 	reset.addEventListener('click', function(event) {
-	document.getElementById('uppic').src =document.getElementById('uppic').src;
+	document.getElementById('uppic').setAttribute('class', 'filter-greyscale-0');
+	processFilters();
+
 	});
+
 
 	}

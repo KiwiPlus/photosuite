@@ -40,4 +40,5 @@ gem 'jquery-ui-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
 gem 'paperclip', '~> 3.5.4'
-gem 'mini_magick'
+gem 'koala'
+

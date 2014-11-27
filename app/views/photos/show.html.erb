@@ -1,50 +1,39 @@
 
 
-<b>Image:</b>
-	<img class="edited-image" id="uppic" src="<%= @photo.image.url(:original) %>"/>
 
-<div class= "topbanner"></div>
+<!--<div>
+	<img id="hidei"/>
+</div>
+-->
+
+
+<!-- si pongo una imagen hidden y la copio a otro div, trabajo sobre ese div, podria llamar la imagen base con una funcionn javascript para activar el reset -->
+
 
 	<body>
+		<div  class= "centerdiv">
+	<img id="uppic" class= "imageoutp" src="<%= @photo.image.url(:original) %>"/>
 
 
-		<div class= "controlscontainer">
-	    	<% if user_signed_in? %>
-		        Signed in as <%= current_user.email %>
-		        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-	    	<% else %>
-		        <%= link_to 'Register', new_user_registration_path %> or 
-		        <%= link_to 'Sign in', new_user_session_path %>
-   		 <% end %>
-</div>
-
-<div id="fb-root"></div>
-<div id="user_nav">
-
-<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
-<div id="status">
-</div>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-
-<!-- uploader -->
-
-			<div class= "controlbuttons">
-					<button class= "button" id= "blur">Blur</button>
-					<button class= "button" id="sharpen">Sharpen</button>
-					<button class= "button" id = "edges" >Edges</button>
-					<button class= "button" id= "emboss" >Emboss</button>
+			<div  class= "controlbuttons">
+					<button class= "button" id = "blur">Blur</button>
+					<button class= "button" id ="sharpen">Sharpen</button>
 					<button class= "button" id = "greyscale" >Greyscale</button>
 					<button class= "button" id = "tint" >Tint</button>
 					<button class= "button" id = "mosaic" >Mosaic</button>
-					<button class= "button" id = "posterize" >Posterize</button>
 					<button class= "button" id = "sepia" >Sepia</button>
-					<button class="button" id= "semos">Sepia+Mosaic</button>
-					<button class= "button"id= "reset">reset</button>
+					<button class= "button" id = "semos">Sepia+Mosaic</button>
+					<button class= "button"	id = "reset">reset</button>
+
+					<div id="fb-root"></div>
+					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
+					<div id="status">	
+					<div class="fb-like" data-width="450"> </div> <%= link_to 'Back', photos_path %>
+					</div>
+
+
 			</div>
 
+
+		</div>
+	</body>
