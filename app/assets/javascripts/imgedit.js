@@ -9,7 +9,7 @@ var TintIt = document.getElementById('tint');
 var MosaicIt = document.getElementById('mosaic');
 var SepiaIt = document.getElementById('sepia');
 var SeMosIt = document.getElementById('semos');
-var reset = document.getElementById('reset');
+
 
 
 
@@ -28,49 +28,44 @@ var reset = document.getElementById('reset');
 	// rest of effects
 
 	BlurIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-blur');
+	document.getElementById('uppic').setAttribute('class', 'filter-blur imageoutp');
 	processFilters();
 	});
 
 	SharpIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-sharpen');
+	document.getElementById('uppic').setAttribute('class', 'filter-sharpen imageoutp');
 	processFilters();
 	});
 
 
 	GreysIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-greyscale');
+	document.getElementById('uppic').setAttribute('class', 'filter-greyscale imageoutp');
 	processFilters();
 
 	});
 
 
 	TintIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-tint');
+	document.getElementById('uppic').setAttribute('class', 'filter-tint imageoutp');
 	processFilters();
 	});
 
 	MosaicIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-mosaic');
+	document.getElementById('uppic').setAttribute('class', 'filter-mosaic imageoutp');
 	processFilters();
 	});
 
 
 	SepiaIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-sepia');
+	document.getElementById('uppic').setAttribute('class', 'filter-sepia imageoutp');
 	processFilters();
 	});
 
 	SeMosIt.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-sepia filter-mosaic');
+	document.getElementById('uppic').setAttribute('class', 'filter-sepia filter-mosaic imageoutp');
 	processFilters();
 	});
 
-	reset.addEventListener('click', function(event) {
-	document.getElementById('uppic').setAttribute('class', 'filter-greyscale-0');
-	processFilters();
-
-	});
 
 
 	}

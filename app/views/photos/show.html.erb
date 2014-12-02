@@ -12,8 +12,9 @@
 
 	<body>
 		<div  class= "centerdiv">
+		
 	<img id="uppic" class= "imageoutp" src="<%= @photo.image.url(:original) %>"/>
-
+			
 
 			<div  class= "controlbuttons">
 					<button class= "button" id = "blur">Blur</button>
@@ -23,7 +24,6 @@
 					<button class= "button" id = "mosaic" >Mosaic</button>
 					<button class= "button" id = "sepia" >Sepia</button>
 					<button class= "button" id = "semos">Sepia+Mosaic</button>
-					<button class= "button"	id = "reset">reset</button>
 
 					<div id="fb-root"></div>
 					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
